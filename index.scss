@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+
+.container {
+    width: 60%;
+    margin-inline: auto;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 80px;
+
+    .dropmenu {
+        width: 300px;
+        border: 1px solid #222;
+        padding: 10px;
+        overflow: hidden;
+        margin-bottom: 15px;
+
+        &.show {
+            .description {
+                height: auto;
+                visibility: visible;
+            }
+        }
+        
+        .head {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #222;
+        }
+        .description {
+            height: 0px;
+            visibility: hidden;
+            transition: 300ms ease;
+        }
+    }
+}
